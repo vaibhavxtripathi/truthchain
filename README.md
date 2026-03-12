@@ -38,6 +38,3 @@ chmod +x scripts/deploy.sh && ./scripts/deploy.sh
 cd frontend && npm install && npm run dev
 ```
 
----
-
-## Project #3 of 30 — Stellar Hackathon MOU
