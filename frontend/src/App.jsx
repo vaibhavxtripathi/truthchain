@@ -444,7 +444,7 @@ export default function App() {
       </div>
 
       <footer className="footer">
-        <span>TRUTHCHAIN — PROJECT #3 OF 30 — STELLAR SOROBAN HACKATHON</span>
+        <span>TRUTHCHAIN — STAKE YOUR BELIEFS ON STELLAR</span>
         <a href={`https://stellar.expert/explorer/testnet/contract/${CONTRACT_ID}`}
           target="_blank" rel="noreferrer">CONTRACT ↗</a>
       </footer>
