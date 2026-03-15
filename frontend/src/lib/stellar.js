@@ -55,7 +55,7 @@ export async function postStatement(author, text, stakeXLM) {
       StellarSdk.Address.fromString(author).toScVal(),
       StellarSdk.Address.fromString(CONTRACT_ID).toScVal(),
       new StellarSdk.XdrLargeInt('i128', stake).toI128(),
-      StellarSdk.xdr.ScVal.scvU32(99_999_999),
+      StellarSdk.xdr.ScVal.scvU32(3_110_400),
     )
   ])
   await sendTx(approveTx)
@@ -86,7 +86,7 @@ export async function challengeStatement(challenger, stmtId, stakeXLM) {
       StellarSdk.Address.fromString(challenger).toScVal(),
       StellarSdk.Address.fromString(CONTRACT_ID).toScVal(),
       new StellarSdk.XdrLargeInt('i128', stake).toI128(),
-      StellarSdk.xdr.ScVal.scvU32(99_999_999),
+      StellarSdk.xdr.ScVal.scvU32(3_110_400),
     )
   ])
   await sendTx(approveTx)
@@ -115,7 +115,7 @@ export async function supportStatement(supporter, stmtId, stakeXLM) {
       StellarSdk.Address.fromString(supporter).toScVal(),
       StellarSdk.Address.fromString(CONTRACT_ID).toScVal(),
       new StellarSdk.XdrLargeInt('i128', stake).toI128(),
-      StellarSdk.xdr.ScVal.scvU32(99_999_999),
+      StellarSdk.xdr.ScVal.scvU32(3_110_400),
     )
   ])
   await sendTx(approveTx)
