@@ -21,7 +21,7 @@ async function sendTx(tx) {
   const sim = await rpc.simulateTransaction(tx)
   if (StellarSdk.rpc.Api.isSimulationError(sim)) throw new Error(sim.error)
   const prep = StellarSdk.rpc.assembleTransaction(tx, sim).build()
-  const result = await signTransaction(prep.toXDR(), { network: 'TESTNET' })
+  const result = await signTransaction(prep.toXDR(), { networkPassphrase: NET })
   if (result.error) throw new Error(result.error)
   const sent = await rpc.sendTransaction(
     StellarSdk.TransactionBuilder.fromXDR(result.signedTxXdr, NET)
@@ -181,3 +181,4 @@ export async function getTotalCount() {
 }
 
 export { CONTRACT_ID, XLM_TOKEN }
+
