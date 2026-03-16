@@ -1,8 +1,8 @@
 import * as StellarSdk from '@stellar/stellar-sdk'
 import { isConnected, getPublicKey, signTransaction } from '@stellar/freighter-api'
 
-const CONTRACT_ID  = import.meta.env.VITE_CONTRACT_ID
-const XLM_TOKEN    = import.meta.env.VITE_XLM_TOKEN
+const CONTRACT_ID  = (import.meta.env.VITE_CONTRACT_ID || '').trim()
+const XLM_TOKEN    = (import.meta.env.VITE_XLM_TOKEN || '').trim()
 const NET          = import.meta.env.VITE_NETWORK_PASSPHRASE || 'Test SDF Network ; September 2015'
 const RPC_URL      = import.meta.env.VITE_SOROBAN_RPC_URL   || 'https://soroban-testnet.stellar.org'
 
